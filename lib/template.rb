@@ -7,3 +7,6 @@ def source_paths
 end
 
 apply 'settings/postgres.rb'
+apply 'settings/brakeman.rb'
+apply 'settings/bundler_audit.rb'
+apply 'settings/rubycritic.rb'

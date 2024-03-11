@@ -41,25 +41,26 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 - Postgres
   - Configures a minimalistic `config/database.yml`
   - Optionally, configures UUID primary keys
+-
 
 ## Test, CI features
+
+- brakeman
+- bundler-audit
+- rubycritic
 
 # TODO
 
 ## Tools
 
-- [ ] RSpec
+- [ ] Sidekiq
+- [ ] RSpec (via rspec-rails, but we should also include rspec-sidekiq if Sidekiq is included)
 - [ ] Rubocop (incl. extensions depending on other tools)
-- [ ] Brakeman
-- [ ] bundler-audit
-- [ ] rubycritic
 - [ ] Factory bot
 - [ ] Shoulda matchers
 - [ ] TBD Faraday
-- [ ] Sidekiq
 - [ ] Sentry
 - [ ] Safe migrations
-- [ ] Bullet?
 - [ ] Rack::Deflater?
 - [ ] Segment
 - [ ] Tailwind, flowbite?
