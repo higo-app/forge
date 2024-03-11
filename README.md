@@ -47,15 +47,16 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 - **brakeman**: Find security vulnerabilities in your app (added to GH workflow)
 - **bundler-audit**: Find vulnerable dependencies (added to GH workflow)
 - **rubycritic**: Enforce a good quality codebase (added to GH workflow)
+- **factory_bot_rails**: Simplifies record building/creating in tests
+- **rspec-sidekiq**: For Sidekiq testing.
+- **shoulda-matchers**: Simplifies common tests
+- **rspec-rails**: For tests. Includes, initializes `rspec-rails` (without AR fixtures, with transactional fixtures). Integrates with `factory_bot_rails`, `rspec-sidekiq` and `shoulda-matchers`
 
 # TODO
 
 ## Tools
 
-- [ ] RSpec (via rspec-rails, but we should also include rspec-sidekiq if Sidekiq is included)
 - [ ] Rubocop (incl. extensions depending on other tools)
-- [ ] Factory bot
-- [ ] Shoulda matchers
 - [ ] TBD Faraday
 - [ ] Sentry
 - [ ] Strong migrations
@@ -66,7 +67,6 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 ## Configuration
 
 - [ ] Git: Init repo, create a commit for every step?
-- [ ] TBD: Asset pipeline
 - [ ] TBD: Procfiles, /bin/dev?
 - [ ] Github: dependabot, workflows
 - [ ] TBD: staging env
@@ -77,3 +77,4 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 - [ ] I18n (es?)
 - [ ] Mailer
 - [ ] Hosts
+- TBD README
