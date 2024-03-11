@@ -30,8 +30,8 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 ### Applying only specific features
 
 ```sh
-# In your app's root folder, for example if we only want to add Rubocop
-bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge/main/lib/settings/rubocop.rb
+# In your app's root folder, for example if we only want to add Redis config
+bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge/main/lib/settings/redis.rb
 ```
 
 # Features
@@ -40,6 +40,7 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 
 - **Postgres**: Configures a minimalistic `config/database.yml` and, optionally, configures UUID primary keys
 - **Redis**: Adds a single `config/redis/shared.yml` configuration, to be used by ActionCable, Kredis, Sidekiq, etc.
+- **Sidekiq**: Background jobs
 
 ## Test, CI features
 
@@ -51,7 +52,6 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 
 ## Tools
 
-- [ ] Sidekiq
 - [ ] RSpec (via rspec-rails, but we should also include rspec-sidekiq if Sidekiq is included)
 - [ ] Rubocop (incl. extensions depending on other tools)
 - [ ] Factory bot
