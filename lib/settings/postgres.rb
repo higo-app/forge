@@ -32,21 +32,21 @@ create_file 'config/database.yml' do
 end
 
 if yes?('Would you like to set up UUID primary keys? (y/n)')
-  file "db/migrate/#{Time.new.utc.strftime('%y%m%d%H%M%S')}_enable_uuid.rb", <<-RB
-# frozen_string_literal: true
+  file "db/migrate/#{Time.new.utc.strftime('%y%m%d%H%M%S')}_enable_uuid.rb", <<~RB
+    # frozen_string_literal: true
 
-class EnableUuid < ActiveRecord::Migration[#{Rails::VERSION::MAJOR}.#{Rails::VERSION::MINOR}]
-  extension = 'pgcrypto'
+    class EnableUuid < ActiveRecord::Migration[#{Rails::VERSION::MAJOR}.#{Rails::VERSION::MINOR}]
+      extension = 'pgcrypto'
 
-  def up
-    enable_extension extension unless extension_enabled?(extension)
-  end
+      def up
+        enable_extension extension unless extension_enabled?(extension)
+      end
 
-  def down
-    disable_extension extension if extension_enabled?(extension)
-  end
-end
-RB
+      def down
+        disable_extension extension if extension_enabled?(extension)
+      end
+    end
+  RB
   puts 'Generated migration. Do not forget to run it with `rails db:migrate`'
 
   initializer 'generators.rb', <<-RB
@@ -55,8 +55,8 @@ RB
   Rails.application.config.generators do |g|
     g.orm :active_record, primary_key_type: :uuid
   end
-RB
+  RB
 
   inject_into_file 'app/models/application_record.rb', "\n\n  self.implicit_order_column = :created_at",
-                    after: 'primary_abstract_class'
+                   after: 'primary_abstract_class'
 end
