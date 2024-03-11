@@ -38,16 +38,14 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 
 ## App features
 
-- Postgres
-  - Configures a minimalistic `config/database.yml`
-  - Optionally, configures UUID primary keys
--
+- **Postgres**: Configures a minimalistic `config/database.yml` and, optionally, configures UUID primary keys
+- **Redis**: Adds a single `config/redis/shared.yml` configuration, to be used by ActionCable, Kredis, Sidekiq, etc.
 
 ## Test, CI features
 
-- brakeman
-- bundler-audit
-- rubycritic
+- **brakeman**: Find security vulnerabilities in your app (added to GH workflow)
+- **bundler-audit**: Find vulnerable dependencies (added to GH workflow)
+- **rubycritic**: Enforce a good quality codebase (added to GH workflow)
 
 # TODO
 
@@ -60,7 +58,7 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 - [ ] Shoulda matchers
 - [ ] TBD Faraday
 - [ ] Sentry
-- [ ] Safe migrations
+- [ ] Strong migrations
 - [ ] Rack::Deflater?
 - [ ] Segment
 - [ ] Tailwind, flowbite?
@@ -68,10 +66,6 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 ## Configuration
 
 - [ ] Git: Init repo, create a commit for every step?
-- [ ] RVM: Add .ruby-version, .ruby-gemset
-- [ ] TBD: ruby version in Gemfile
-- [ ] Postgres DB config
-- [ ] Redis shared config
 - [ ] TBD: Asset pipeline
 - [ ] TBD: Procfiles, /bin/dev?
 - [ ] Github: dependabot, workflows
