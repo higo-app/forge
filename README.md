@@ -15,27 +15,39 @@ This has been tested with the newest Rails version at the time of writing, which
 ## New applications
 
 ```sh
-rails new foo -m https://raw.githubusercontent.com/higo-app/forge/main/template.rb
+# -d postgresql uses PostgreSQL instead of SQLite. It will be configured as expected.
+# -T skips tests, since we will include RSpec.
+rails new YOUR_APP_NAME -d postgresql -T -m https://raw.githubusercontent.com/higo-app/forge/main/lib/template.rb
 ```
 
 ## Existing applications
 
 ```sh
 # In your app's root folder
-bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge/main/template.rb
+bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge/main/lib/template.rb
+```
+
+### Applying only specific features
+
+```sh
+# In your app's root folder, for example if we only want to add Rubocop
+bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge/main/lib/settings/rubocop.rb
 ```
 
 # Features
 
-## Tools
+## App features
 
-## Configurations
+- Postgres
+  - Configures a minimalistic `config/database.yml`
+  - Optionally, configures UUID primary keys
+
+## Test, CI features
 
 # TODO
 
 ## Tools
 
-- [ ] Postgres
 - [ ] RSpec
 - [ ] Rubocop (incl. extensions depending on other tools)
 - [ ] Brakeman
@@ -59,7 +71,6 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 - [ ] TBD: ruby version in Gemfile
 - [ ] Postgres DB config
 - [ ] Redis shared config
-- [ ] UUID primary keys
 - [ ] TBD: Asset pipeline
 - [ ] TBD: Procfiles, /bin/dev?
 - [ ] Github: dependabot, workflows
