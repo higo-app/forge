@@ -2,11 +2,28 @@
 
 Forge is a [Rails application template](https://guides.rubyonrails.org/rails_application_templates.html) that installs common tools and performs common configurations to avoid repetition
 
+# Requirements
+
+- Rails (`gem install rails`)
+
+# Compatiblity
+
+This has been tested with the newest Rails version at the time of writing, which is 7.1.3
+
 # Usage
+
+## New applications
+
+```sh
+rails new foo -m https://raw.githubusercontent.com/higo-app/forge/main/template.rb
+```
 
 ## Existing applications
 
-## New applications
+```sh
+# In your app's root folder
+bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge/main/template.rb
+```
 
 # Features
 
