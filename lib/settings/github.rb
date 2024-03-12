@@ -117,7 +117,7 @@ file '.github/workflows/code_analysis.yml', <<~YAML
           run: bundle exec brakeman
 
         - name: Rubycritic
-          run: bundle exec rubycritic app -f console -s 90
+          run: bundle exec rubycritic app -f console -s 95
 YAML
 
 puts '--- Remember to add `RAILS_MASTER_KEY` as a repo secret in Github for the test workflow action ---'
