@@ -55,18 +55,17 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 - **[`rspec-sidekiq`](https://github.com/wspurgin/rspec-sidekiq)**: For Sidekiq testing.
 - **[`shoulda-matchers`](https://github.com/thoughtbot/shoulda-matchers)**: Simplifies common tests
 - **[`rspec-rails`](https://github.com/rspec/rspec-rails)**: For tests. Includes, initializes the dependency (without AR fixtures, with transactional fixtures). Integrates with `factory_bot_rails`, `rspec-sidekiq` and `shoulda-matchers`
+- **[`rubocop-rails`](https://github.com/rubocop/rubocop-rails)**: Adds and configures this dependency, along with extensions `rubocop-performance`, `rubocop-rspec`, `rubocop-factory_bot`
 
 # TODO
 
 ## Tools
 
-- [ ] Rubocop (incl. extensions depending on other tools)
 - [ ] Rack::Deflater?
 - [ ] Tailwind, flowbite?
 
 ## Configuration
 
-- [ ] TBD: Procfiles, /bin/dev?
 - [ ] Github: dependabot, workflows
 - [ ] TBD: staging env
 - [ ] Credentials

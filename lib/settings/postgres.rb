@@ -31,7 +31,7 @@ create_file 'config/database.yml' do
   CONFIG
 end
 
-if yes?('Would you like to set up UUID primary keys? (y/n)')
+if yes?('Would you like to set up UUID primary keys? (y/N)')
   file "db/migrate/#{Time.new.utc.strftime('%y%m%d%H%M%S')}_enable_uuid.rb", <<~RB
     # frozen_string_literal: true
 
