@@ -44,6 +44,7 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 - **[`strong_migrations`](https://github.com/ankane/strong_migrations)**: Catches unsafe DB migrations
 - **[`sentry-ruby`](https://github.com/getsentry/sentry-ruby)**: Error reporting. Adds and configures dependency. Also includes `sentry-rails` and `sentry-sidekiq`.
 - **[`analytics-ruby`](https://github.com/segmentio/analytics-ruby)**: Segment analytics (customer data platform). Adds and configures dependency.
+- Add `Procfile` (`web`, `worker` and `release` processes) and `Procfile.dev` (`web` and `worker` processes, although tailwind may also add a `css` process). Also includes `bin/dev` which runs `Procfile.dev` with `foreman`
 
 ## Test, CI features
 
