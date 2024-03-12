@@ -47,7 +47,7 @@ if yes?('Would you like to set up UUID primary keys? (y/n)')
       end
     end
   RB
-  puts 'Generated migration. Do not forget to run it with `rails db:migrate`'
+  puts '--- Generated migration. Do not forget to run it with `rails db:migrate` ---'
 
   initializer 'generators.rb', <<-RB
   # frozen_string_literal: true

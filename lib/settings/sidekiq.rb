@@ -68,7 +68,7 @@ route 'draw :sidekiq_web'
 
 require 'securerandom'
 puts <<~MESSAGE
-  Sidekiq installed. Add the following to your encrypted credentials (e.g. `rails credentials:edit -e production`) to secure Sidekiq web:
+  --- Sidekiq installed. Add the following to your encrypted credentials (e.g. `rails credentials:edit -e production`) to secure Sidekiq web:
 
   sidekiq_web:
     prefix: #{SecureRandom.hex(16)}

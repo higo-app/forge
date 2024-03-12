@@ -38,34 +38,33 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 
 ## App features
 
-- **Postgres**: Configures a minimalistic `config/database.yml` and, optionally, configures UUID primary keys
-- **Redis**: Adds a single `config/redis/shared.yml` configuration, to be used by ActionCable, Kredis, Sidekiq, etc.
-- **Sidekiq**: Background jobs
-- **Strong migrations**: Catches unsafe DB migrations
+- **[`pg`](https://github.com/ged/ruby-pg)**: Connects to a Postgres database. Configures a minimalistic `config/database.yml` and, optionally, configures UUID primary keys.
+- **[`redis`](https://github.com/redis/redis-rb)**: Adds dependency and a single `config/redis/shared.yml` configuration, to be used by ActionCable, Kredis, Sidekiq, etc.
+- **[`sidekiq`](https://github.com/sidekiq/sidekiq)**: Background jobs
+- **[`strong_migrations`](https://github.com/ankane/strong_migrations)**: Catches unsafe DB migrations
+- **[`sentry-ruby`](https://github.com/getsentry/sentry-ruby)**: Error reporting. Adds and configures dependency. Also includes `sentry-rails` and `sentry-sidekiq`.
 
 ## Test, CI features
 
-- **brakeman**: Find security vulnerabilities in your app (added to GH workflow)
-- **bundler-audit**: Find vulnerable dependencies (added to GH workflow)
-- **rubycritic**: Enforce a good quality codebase (added to GH workflow)
-- **factory_bot_rails**: Simplifies record building/creating in tests
-- **rspec-sidekiq**: For Sidekiq testing.
-- **shoulda-matchers**: Simplifies common tests
-- **rspec-rails**: For tests. Includes, initializes `rspec-rails` (without AR fixtures, with transactional fixtures). Integrates with `factory_bot_rails`, `rspec-sidekiq` and `shoulda-matchers`
+- **[`brakeman`](https://github.com/presidentbeef/brakeman)**: Find security vulnerabilities in your app (added to GH workflow)
+- **[`bundler-audit`](https://github.com/rubysec/bundler-audit)**: Find vulnerable dependencies (added to GH workflow)
+- **[`rubycritic`](https://github.com/whitesmith/rubycritic)**: Enforce a good quality codebase (added to GH workflow)
+- **[`factory_bot_rails`](https://github.com/thoughtbot/factory_bot_rails)**: Simplifies record building/creating in tests
+- **[`rspec-sidekiq`](https://github.com/wspurgin/rspec-sidekiq)**: For Sidekiq testing.
+- **[`shoulda-matchers`](https://github.com/thoughtbot/shoulda-matchers)**: Simplifies common tests
+- **[`rspec-rails`](https://github.com/rspec/rspec-rails)**: For tests. Includes, initializes the dependency (without AR fixtures, with transactional fixtures). Integrates with `factory_bot_rails`, `rspec-sidekiq` and `shoulda-matchers`
 
 # TODO
 
 ## Tools
 
 - [ ] Rubocop (incl. extensions depending on other tools)
-- [ ] Sentry
 - [ ] Rack::Deflater?
 - [ ] Segment
 - [ ] Tailwind, flowbite?
 
 ## Configuration
 
-- [ ] Git: Init repo, create a commit for every step?
 - [ ] TBD: Procfiles, /bin/dev?
 - [ ] Github: dependabot, workflows
 - [ ] TBD: staging env
