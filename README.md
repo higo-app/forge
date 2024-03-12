@@ -41,6 +41,7 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 - **Postgres**: Configures a minimalistic `config/database.yml` and, optionally, configures UUID primary keys
 - **Redis**: Adds a single `config/redis/shared.yml` configuration, to be used by ActionCable, Kredis, Sidekiq, etc.
 - **Sidekiq**: Background jobs
+- **Strong migrations**: Catches unsafe DB migrations
 
 ## Test, CI features
 
@@ -57,9 +58,7 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 ## Tools
 
 - [ ] Rubocop (incl. extensions depending on other tools)
-- [ ] TBD Faraday
 - [ ] Sentry
-- [ ] Strong migrations
 - [ ] Rack::Deflater?
 - [ ] Segment
 - [ ] Tailwind, flowbite?
