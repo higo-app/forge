@@ -35,7 +35,7 @@ INITIALIZER
 initializer 'sidekiq_web.rb', <<~INITIALIZER
   # frozen_string_literal: true
 
-  # Adds HTTP Basic Auth to Sidekiq Web in production (see encrypted credentials).
+  # Adds HTTP Basic Auth to Sidekiq Web in staging and production (see encrypted credentials).
 
   require 'sidekiq/web'
 
