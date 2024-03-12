@@ -57,6 +57,12 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 - **[`shoulda-matchers`](https://github.com/thoughtbot/shoulda-matchers)**: Simplifies common tests
 - **[`rspec-rails`](https://github.com/rspec/rspec-rails)**: For tests. Includes, initializes the dependency (without AR fixtures, with transactional fixtures). Integrates with `factory_bot_rails`, `rspec-sidekiq` and `shoulda-matchers`
 - **[`rubocop-rails`](https://github.com/rubocop/rubocop-rails)**: Adds and configures this dependency, along with extensions `rubocop-performance`, `rubocop-rspec`, `rubocop-factory_bot`
+- Github:
+  - Add Dependabot configuration: `.github/dependabot.yml` configures weekly updates, groups development dependencies (i.e. the ones in `development` and `test` groups) and sentry gems
+  - Add PR template
+  - Workflows:
+    - `test`: Runs test suite with `rspec`
+    - `code_analysis`: Runs `bundle-audit`, `rubocop`, `brakeman`, `rubycritic`
 
 # TODO
 
