@@ -51,6 +51,7 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 - **[`sentry-ruby`](https://github.com/getsentry/sentry-ruby)**: Error reporting. Adds and configures dependency. Also includes `sentry-rails` and `sentry-sidekiq`.
 - **[`analytics-ruby`](https://github.com/segmentio/analytics-ruby)**: Segment analytics (customer data platform). Adds and configures dependency.
 - **[`devise`](https://github.com/heartcombo/devise)** (Optional): Adds dependency, runs initializer, changes a couple of configurations, adds translations and optionally adds flashes to the application layout and a static page as a root path.
+- **[`tailwindcss-rails`](https://github.com/rails/tailwindcss-rails)** (Optional): Adds dependency and runs initializer
 - Add `Procfile` (`web`, `worker` and `release` processes) and `Procfile.dev` (`web` and `worker` processes, although tailwind may also add a `css` process). Also includes `bin/dev` which runs `Procfile.dev` with `foreman`
 - Add `staging` environment (copy from `production`)
 - Compress (gzip) responses with `Rack::Deflater` in production and staging.
@@ -75,9 +76,3 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
   - Workflows:
     - `test`: Runs test suite with `rspec`
     - `code_analysis`: Runs `bundle-audit`, `rubocop`, `brakeman`, `rubycritic`
-
-# TODO
-
-## Tools
-
-- [ ] Tailwind, flowbite?

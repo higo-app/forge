@@ -27,5 +27,8 @@ apply 'settings/mailer_from.rb'
 apply 'settings/i18n.rb'
 apply 'settings/hosts.rb'
 apply 'settings/devise.rb' if yes?('Add and configure Devise? (y/N)')
+if yes?('Add and configure Tailwind CSS? Do not add it if you have already passed `--css tailwind`. (y/N)')
+  apply 'settings/tailwind.rb'
+end
 apply 'settings/rubocop.rb'
 apply 'settings/readme.rb'
