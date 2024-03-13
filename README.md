@@ -36,7 +36,7 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 
 # Features
 
-## App features
+## App features (dependencies, configuration)
 
 - **[`pg`](https://github.com/ged/ruby-pg)**: Connects to a Postgres database. Configures a minimalistic `config/database.yml` and, optionally, configures UUID primary keys.
 - **[`redis`](https://github.com/redis/redis-rb)**: Adds dependency and a single `config/redis/shared.yml` configuration, to be used by ActionCable, Kredis, Sidekiq, etc.
@@ -45,11 +45,12 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 - **[`sentry-ruby`](https://github.com/getsentry/sentry-ruby)**: Error reporting. Adds and configures dependency. Also includes `sentry-rails` and `sentry-sidekiq`.
 - **[`analytics-ruby`](https://github.com/segmentio/analytics-ruby)**: Segment analytics (customer data platform). Adds and configures dependency.
 - Add `Procfile` (`web`, `worker` and `release` processes) and `Procfile.dev` (`web` and `worker` processes, although tailwind may also add a `css` process). Also includes `bin/dev` which runs `Procfile.dev` with `foreman`
-- Compress (gzip) responses with `Rack::Deflater` in production.
 - Add `staging` environment (copy from `production`)
+- Compress (gzip) responses with `Rack::Deflater` in production and staging.
 - Changes default `from` (i.e. sender) in `ApplicationMailer`
 - Allows adding I18n available and default locales (from [svenfuchs/rails-i18n](https://github.com/svenfuchs/rails-i18n/tree/master))
-- Allows configuring hosts / default URL options
+- Allows configuring hosts / default URL options for all environments
+- Populates `README.md`
 
 ## Test, CI features
 
@@ -74,9 +75,3 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 
 - [ ] TBD Devise
 - [ ] Tailwind, flowbite?
-
-## Configuration
-
-- [ ] TBD Dockerfile config
-- [ ] TBD Heroku
-- TBD README
