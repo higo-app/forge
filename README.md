@@ -49,6 +49,7 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 - Add `staging` environment (copy from `production`)
 - Changes default `from` (i.e. sender) in `ApplicationMailer`
 - Allows adding I18n available and default locales (from [svenfuchs/rails-i18n](https://github.com/svenfuchs/rails-i18n/tree/master))
+- Allows configuring hosts / default URL options
 
 ## Test, CI features
 
@@ -78,5 +79,4 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 
 - [ ] TBD Dockerfile config
 - [ ] TBD Heroku
-- [ ] Hosts
 - TBD README
