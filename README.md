@@ -47,6 +47,7 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 - Add `Procfile` (`web`, `worker` and `release` processes) and `Procfile.dev` (`web` and `worker` processes, although tailwind may also add a `css` process). Also includes `bin/dev` which runs `Procfile.dev` with `foreman`
 - Compress (gzip) responses with `Rack::Deflater` in production.
 - Add `staging` environment (copy from `production`)
+- Changes default `from` (i.e. sender) in `ApplicationMailer`
 
 ## Test, CI features
 
@@ -74,11 +75,8 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 
 ## Configuration
 
-- [ ] Credentials
-- [ ] AR encryption
 - [ ] TBD Dockerfile config
 - [ ] TBD Heroku
 - [ ] I18n (es?)
-- [ ] Mailer
 - [ ] Hosts
 - TBD README
