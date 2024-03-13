@@ -48,6 +48,7 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 - Compress (gzip) responses with `Rack::Deflater` in production.
 - Add `staging` environment (copy from `production`)
 - Changes default `from` (i.e. sender) in `ApplicationMailer`
+- Allows adding I18n available and default locales (from [svenfuchs/rails-i18n](https://github.com/svenfuchs/rails-i18n/tree/master))
 
 ## Test, CI features
 
@@ -77,6 +78,5 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 
 - [ ] TBD Dockerfile config
 - [ ] TBD Heroku
-- [ ] I18n (es?)
 - [ ] Hosts
 - TBD README
