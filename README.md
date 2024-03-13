@@ -14,6 +14,12 @@ This has been tested with the newest Rails version at the time of writing, which
 
 ## New applications
 
+<details>
+<summary>Recommended previous step (RVM)</summary>
+
+Use RVM or a similar Ruby version manager and isolate this app to its own gemset. With RVM, you can do this by adding `.ruby-version` and `.ruby-gemset` files in a new folder. If you do this, instead of calling `rails new YOUR_APP_NAME`, you can use `rails new .` in the command below.
+</details>
+
 ```sh
 # -d postgresql uses PostgreSQL instead of SQLite. It will be configured as expected.
 # -T skips tests, since we will include RSpec.
@@ -44,6 +50,7 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 - **[`strong_migrations`](https://github.com/ankane/strong_migrations)**: Catches unsafe DB migrations
 - **[`sentry-ruby`](https://github.com/getsentry/sentry-ruby)**: Error reporting. Adds and configures dependency. Also includes `sentry-rails` and `sentry-sidekiq`.
 - **[`analytics-ruby`](https://github.com/segmentio/analytics-ruby)**: Segment analytics (customer data platform). Adds and configures dependency.
+- **[`devise`](https://github.com/heartcombo/devise)** (Optional): Adds dependency, runs initializer, changes a couple of configurations, adds translations and optionally adds flashes to the application layout and a static page as a root path.
 - Add `Procfile` (`web`, `worker` and `release` processes) and `Procfile.dev` (`web` and `worker` processes, although tailwind may also add a `css` process). Also includes `bin/dev` which runs `Procfile.dev` with `foreman`
 - Add `staging` environment (copy from `production`)
 - Compress (gzip) responses with `Rack::Deflater` in production and staging.
@@ -73,5 +80,4 @@ bin/rails app:template LOCATION=https://raw.githubusercontent.com/higo-app/forge
 
 ## Tools
 
-- [ ] TBD Devise
 - [ ] Tailwind, flowbite?

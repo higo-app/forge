@@ -26,5 +26,6 @@ apply 'settings/staging.rb'
 apply 'settings/mailer_from.rb'
 apply 'settings/i18n.rb'
 apply 'settings/hosts.rb'
+apply 'settings/devise.rb' if yes?('Add and configure Devise? (y/N)')
 apply 'settings/rubocop.rb'
 apply 'settings/readme.rb'
