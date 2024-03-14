@@ -28,5 +28,5 @@ apply "#{base_url}settings/devise.rb" if yes?('Add and configure Devise? (y/N)')
 if yes?('Add and configure Tailwind CSS? Do not add it if you have already passed `--css tailwind`. (y/N)')
   apply "#{base_url}settings/tailwind.rb"
 end
-apply "#{base_url}settings/rubocop.rb"
 apply "#{base_url}settings/readme.rb"
+apply "#{base_url}settings/rubocop.rb"
