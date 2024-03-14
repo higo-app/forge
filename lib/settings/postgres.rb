@@ -36,14 +36,18 @@ if yes?('Would you like to set up UUID primary keys? (y/N)')
     # frozen_string_literal: true
 
     class EnableUuid < ActiveRecord::Migration[#{Rails::VERSION::MAJOR}.#{Rails::VERSION::MINOR}]
-      extension = 'pgcrypto'
-
       def up
         enable_extension extension unless extension_enabled?(extension)
       end
 
       def down
         disable_extension extension if extension_enabled?(extension)
+      end
+
+      private
+
+      def extension
+        'pgcrypto'
       end
     end
   RB
