@@ -3,7 +3,7 @@
 gem_group :development, :test do
   gem 'rspec-rails'
 end
-
+Bundler.with_unbundled_env { run 'bundle install' }
 generate 'rspec:install'
 
 # Keep a simpler rails_helper.rb file that also includes FactoryBot, Shoulda Matchers and RSpec Sidekiq config.
