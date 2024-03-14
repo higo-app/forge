@@ -7,6 +7,8 @@ gem_group :development, :test do
   gem 'rubocop-rspec', require: false
 end
 
+Bundler.with_unbundled_env { run 'bundle install' }
+
 file '.rubocop.yml', <<~YAML
   require:
     - rubocop-factory_bot

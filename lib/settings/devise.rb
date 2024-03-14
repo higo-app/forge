@@ -3,6 +3,7 @@
 # 1. Adds devise and runs the generator (configuration)
 
 gem 'devise'
+Bundler.with_unbundled_env { run 'bundle install' }
 rails_command 'generate devise:install'
 
 # 2. Configure mailer
