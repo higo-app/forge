@@ -29,5 +29,5 @@ default = ask('Do you want to set a default locale? (e.g. en, es, fr)')
 return if default.blank?
 
 inject_into_file 'config/application.rb', <<-RUBY, before: /^  end/
-    I18n.default_locale = :#{default}
+    I18n.default_locale = #{default.to_sym.inspect}
 RUBY
